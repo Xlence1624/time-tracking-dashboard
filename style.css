@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  min-width: 1440px;
+  width: 100vw;
+  height: 100vh;
+  /*padding-top: 116px;
+  padding-left: 30px;*/
+}
+
+.main-container {
+  display: flex;
+}
+
+/* -- Left Side -------------------------------*/
+.left {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  width: 255px;
+  height: 518px;
+}
+
+/* -- User -------------------------------*/
+.user {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: inherit;
+  width: inherit;
+  height: 354px;
+  padding: 34px 29px;
+}
+
+.user-img-container {
+  margin-bottom: 35px;
+}
+
+.jeremy-img {
+  width: 84px;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3px;
+}
+
+small {
+  color: hsl(236, 100%, 87%);
+}
+
+.user-name span {
+  color: hsl(0, 0%, 100%);
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-top: 3px;
+}
+
+/* -- Menu -------------------------------*/
+.time-span-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Prevents link width equal to container width. */
+  padding: 25px 33px;
+}
+
+a {
+  color: hsl(235, 45%, 61%);
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+/* -- Right Side -------------------------------*/
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -- Top/Bottom -------------------------------*/
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 825px;
+  margin: 0 30px;
+}
+
+.top {
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 18px 18px; /* Increased the border radius to hide any artifacts card's sub-container. */
+  width: 255px;
+  height: 244px;
+}
+
+/* -- Cards -------------------------------*/
+.work-card {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-work.svg");
+  background-position: 159px -11px; /* Use x and y coordinates to position bg. */
+}
+
+.play-card {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-play.svg");
+  background-position: 158px -5px;
+}
+
+.study-card {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-study.svg");
+  background-position: 159px -7px;
+}
+
+.exercise-card {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-exercise.svg");
+  background-position: 157px -1px;
+}
+
+.social-card {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-social.svg");
+  background-position: 166px 0px;
+}
+
+.self-care-card {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("https://raw.githubusercontent.com/frontendmentorio/time-tracking-dashboard/59cdb93d7adabaa453d43c35918d719ba3581336/images/icon-self-care.svg");
+  background-position: 173px -11px;
+}
+
+/* -- Card Contents -------------------------------*/
+.activity-time {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 46%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 29px 30px 32px;
+}
+
+.activity-time:hover {
+  background-color: hsl(235, 46%, 37%);
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity strong {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.ellipsis-container {
+  display: flex;
+  cursor: pointer;
+}
+
+.ellipsis-img {
+  align-self: center;
+  width: 21px;
+}
+
+.ellipsis-container:hover {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7453%)
+    hue-rotate(140deg) brightness(114%) contrast(101%);
+}
+
+.time-spent {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-spent span {
+  font-size: 55px;
+  font-weight: 300;
+  margin: 25px 0 8px;
+}
+
+.time-spent small {
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    justify-content: flex-start;
+    min-width: 375px;
+    width: initial;
+    height: initial;
+    padding: 81px 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 375px;
+  }
+
+  /* -- Left Side -------------------------------*/
+  .left {
+    align-self: center;
+    width: 327px;
+    height: 203px;
+  }
+
+  /* -- User -------------------------------*/
+  .user {
+    flex-direction: row;
+    align-items: center;
+    height: 133px;
+    padding: 10px 29px;
+  }
+
+  .user-img-container {
+    margin: 6px 14px 0 0;
+  }
+
+  .jeremy-img {
+    width: 70px;
+  }
+
+  .user-name span {
+    font-size: 24px;
+    margin-top: 4px;
+  }
+
+  /* -- Menu -------------------------------*/
+  .time-span-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 34px;
+  }
+  
+  /* -- Right Side -------------------------------*/
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* -- Top/Bottom -------------------------------*/
+  .top,
+  .bottom {
+    flex-direction: column;
+    width: 327px;
+    margin: 0;
+  }
+
+  .top {
+    margin-bottom: 0;
+  }
+
+  .card {
+    width: 327px;
+    height: 160px;
+    margin-top: 24px;
+  }
+
+  /* -- Cards -------------------------------*/
+  .work-card {
+    background-position: 231px -11px;
+  }
+
+  .play-card {
+    background-position: 230px -5px;
+  }
+
+  .study-card {
+    background-position: 231px -7px;
+  }
+
+  .exercise-card {
+    background-position: 229px -1px;
+  }
+
+  .social-card {
+    background-position: 239px -15px;
+  }
+
+  .self-care-card {
+    background-position: 245px -11px;
+  }
+
+  /* -- Card Contents -------------------------------*/
+  .activity-time {
+    padding: 28px 24px;
+  }
+
+  .time-spent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  .time-spent span {
+    font-size: 32px;
+    margin: 0;
+  }
+}
